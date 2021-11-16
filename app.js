@@ -64,8 +64,12 @@ https.get(url, function (response){
 
 
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+app.listen(port);
 
-
-app.listen(8080, function(){
-    console.log("Server is running on port 8080");
+app.listen(port, function(){
+    console.log("Server has started successfully on port 3000");
 });
